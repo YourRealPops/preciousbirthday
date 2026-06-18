@@ -1,0 +1,123 @@
+.letter__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.letter .eyebrow {
+  margin-bottom: 2rem;
+}
+
+.letter__stage {
+  width: 100%;
+  max-width: 560px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.letter__envelope {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.letter__envelope-art {
+  width: min(80vw, 320px);
+  height: auto;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
+}
+
+.letter__seal-text {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  fill: #2a1608;
+}
+
+.letter__envelope-label {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--parchment-dim);
+  opacity: 0.8;
+}
+
+.letter__card {
+  width: 100%;
+  background: var(--parchment);
+  color: #2a1c1c;
+  padding: clamp(2rem, 5vw, 3.25rem) clamp(1.75rem, 5vw, 3rem);
+  border-radius: 3px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  text-align: left;
+}
+
+.letter__salutation {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #3a1a2b;
+  margin-bottom: 1rem;
+}
+
+.letter__rule {
+  display: block;
+  width: 64px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.letter__paragraph {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3a2a2a;
+  margin-bottom: 1.1rem;
+}
+
+.letter__signoff {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #5a4040;
+  margin-top: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.letter__signature {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 9vw, 2.6rem);
+  color: var(--oxblood);
+  line-height: 1;
+}
+
+.letter__close {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #7a5a55;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+}
+
+.letter__close:hover {
+  opacity: 1;
+}
+
+@media (max-width: 560px) {
+  .letter__stage {
+    min-height: 360px;
+  }
+}

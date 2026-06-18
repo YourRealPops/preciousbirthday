@@ -1,0 +1,132 @@
+.outro__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outro__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  color: var(--parchment);
+  margin-bottom: 1rem;
+}
+
+.outro__subline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--parchment-dim);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 34ch;
+  margin-bottom: clamp(3rem, 8vh, 4.5rem);
+}
+
+.outro__candle-wrap {
+  position: relative;
+  width: 140px;
+  height: 170px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.outro__candle {
+  position: relative;
+  width: 28px;
+  height: 130px;
+}
+
+.outro__candle-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, #f6ecd9, #d8c8a8);
+  border-radius: 4px 4px 2px 2px;
+  box-shadow: inset -4px 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.outro__candle-wick {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 12px;
+  background: #3a2a1c;
+  border-radius: 1px;
+}
+
+.outro__candle-flame {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  width: 16px;
+  height: 26px;
+  background: radial-gradient(circle at 50% 70%, #fff3c4 0%, #f3b53f 42%, #d9731c 78%, transparent 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  filter: drop-shadow(0 0 10px rgba(243, 181, 63, 0.55));
+  animation: outroFlicker 2.4s ease-in-out infinite;
+}
+
+@keyframes outroFlicker {
+  0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); }
+  25% { transform: translateX(-50%) scale(1.05, 0.95) rotate(-2deg); }
+  50% { transform: translateX(-50%) scale(0.95, 1.05) rotate(1.5deg); }
+  75% { transform: translateX(-50%) scale(1.02, 0.97) rotate(-1deg); }
+}
+
+.outro__candle-smoke {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 6px;
+  height: 30px;
+  background: linear-gradient(to top, rgba(220, 210, 200, 0.5), transparent);
+  border-radius: 50%;
+  animation: smokeRise 2.2s ease-out forwards;
+}
+
+@keyframes smokeRise {
+  0% { opacity: 0.7; transform: translateX(-50%) translateY(0) scaleY(1); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-40px) scaleY(1.6); }
+}
+
+.outro__sparks {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.outro__spark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold-bright);
+  box-shadow: 0 0 6px var(--gold-bright);
+}
+
+.outro__note {
+  margin-top: -0.5rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--parchment-dim);
+  max-width: 36ch;
+}
+
+.outro__signature {
+  font-family: var(--font-script);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  color: var(--gold-bright);
+  margin-top: 1rem;
+}
