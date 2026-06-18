@@ -13,7 +13,7 @@ const slides: Slide[] = [
   ...photos.map((p) => ({ type: 'photo' as const, src: p.src, caption: p.caption })),
   {
     type: 'video',
-    src: '',
+    src: '/photos/Slidevid.mp4',
     caption: 'Such a cute woman!!',
   },
 ]
