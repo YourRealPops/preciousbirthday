@@ -92,6 +92,7 @@ export default function Slideshow() {
                     className="slideshow__media"
                     src={slide.src}
                     controls
+                    autoPlay
                     muted
                     playsInline
                   />

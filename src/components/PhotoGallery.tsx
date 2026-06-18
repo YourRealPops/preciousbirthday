@@ -145,6 +145,8 @@ export default function PhotoGallery() {
                       className="gallery__lightbox-video"
                       src={active.src}
                       controls
+                      autoPlay
+                      muted
                       playsInline
                     />
                   ) : (
