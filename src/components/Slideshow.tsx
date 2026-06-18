@@ -14,7 +14,7 @@ const slides: Slide[] = [
   {
     type: 'video',
     src: '',
-    caption: 'Drop a video clip here — replace the src in src/data/slides.ts',
+    caption: 'Such a cute woman!!',
   },
 ]
 
